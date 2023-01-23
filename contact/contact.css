@@ -1,0 +1,190 @@
+body {
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.menu-bar {
+      background-color: black;
+      height: auto;
+      position: fixed; /* Set the navbar to fixed position */
+      top: 0; /* Position the navbar at the top of the page */
+      width: 100%; /* Full width */
+      z-index: 1;
+      animation:  fadeInAnimation ease 3s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+  }
+  
+  .nav-item{
+    margin: 15px 15px;
+    display: inline-block;
+    position: relative;
+  }
+  
+  .nav-item a {
+    color: white;
+    font-size: 25px;
+  }
+  
+  .nav-item a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: orange;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .nav-item a:hover {
+    color: orange;
+  }
+  
+  .nav-item a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.middle-section {
+  background-image: url("/dien's website/pics/bg.jpg");
+  height: 1300px;
+  padding: 200px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.middle-block {
+  background-color: black;
+  color: white;
+  border: 3px solid orange;
+  opacity: 0.9;
+  height: auto;
+  width: 800px;
+  animation:  fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+  
+
+.middle-block h1 {
+  margin-bottom: 40px;
+}
+
+.middle-block form {
+  margin: 30px;
+  padding: 20px 0px;
+}
+
+.middle-block button {
+  background-color: white;
+  margin-top: 120px;
+  height: 50px;
+  width: 200px;
+}
+
+@media only screen and (max-width: 802px) {
+    .middle-block {
+      width: 700px;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .middle-block {
+      width: 600px;
+    }
+}
+
+@media only screen and (max-width: 614px) {
+    .middle-block {
+      width: 500px;
+    }
+    .nav-item a {
+      font-size: 23px;
+    }
+}
+
+@media only screen and (max-width: 551px) {
+  .nav-item a {
+    font-size: 21px;
+  }
+}
+  
+
+@media only screen and (max-width: 516px) {
+    .middle-block {
+      margin-top: 50px;
+      width: 400px;
+    }
+}
+
+
+@media only screen and (max-width: 483px) {
+  .nav-item a {
+    font-size: 20px;
+  }
+}
+  
+
+@media only screen and (max-width: 411px) {
+
+  .middle-section {
+    height: 1400px;
+    padding: 200px 0px;
+  }
+
+  .middle-block {
+    opacity: 1;
+    margin-top: 150px;
+    width: 300px;
+  }
+}
+
+@media only screen and (max-width: 468px) {
+  .nav-item a {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 435px) {
+  .nav-item a {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 341px) {
+  .nav-item a {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 317px) {
+  .middle-section {
+    height: 1400px;
+    padding: 200px 0px;
+  }
+
+  .middle-block {
+    margin-top: 300px;
+    width: 200px;
+  }
+
+  .middle-block button {
+    background-color: white;
+    margin-top: 70px;
+    height: 50px;
+    width: 100px;
+  }
+}

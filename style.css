@@ -1,0 +1,128 @@
+body {
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.menu-bar {
+  background-color: black;
+  height: auto;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  z-index: 1;
+  animation:  fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.nav-item{
+  margin: 15px 15px;
+  display: inline-block;
+  position: relative;
+}
+
+.nav-item a {
+  color: white;
+  font-size: 25px;
+}
+
+.nav-item a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0087ca;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.nav-item a:hover {
+  color: #0087ca;
+}
+
+.nav-item a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.middle-section {
+  background-image: url("pics/bg.jpg");
+  color: white;
+  height: 1290px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.middle-block {
+  background-color: black;
+  opacity: 0.9;
+  height: auto;
+  animation:  fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.middle-block h1 {
+  margin: 40px 10px 5px 10px; /* top right bottom left */
+  text-align: center;
+}
+
+.middle-block h3 {
+  margin: 5px 30px 20px 30px;
+  text-align: center;
+}
+
+.middle-block ul {
+  list-style-type: square;
+  font-size: 25px;
+  margin: 30px 30px 40px 30px;
+}
+
+.middle-block li {
+  margin: 10px 0px 20px 0px;
+}
+
+.logo-container {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  animation:  fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+img {
+  height: 50px;
+  position: relative;
+  display: block;
+  float: right;
+  margin: 0px 1px 0px 1px;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@media only screen and (max-width: 335px) {
+  .nav-item a {
+    font-size: 15px;
+  }
+
+  .middle-block h1, h3, li{
+    font-size: 15px;
+  }
+
+  img {
+    height: 40px;
+  }
+}
