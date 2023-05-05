@@ -1,4 +1,3 @@
-# Portfolio-website
-A website for displaying my portfolio and a contact me.
-Currently it has only a few of my old projects, will update with new ones in the next few weeks.
-Also has a way for people to contact me if needed.
+### Portfolio-website
+# A page for me for display my current finished film projects and have interested parties contact me!
+# Built from the ground up and also for a way for me practice!
