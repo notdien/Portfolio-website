@@ -1,10 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Darumadrop+One&display=swap');
+
+body {
+    font-family: 'Darumadrop One', cursive;
+}
+
 .responsive {
     max-width: 100%;
     height: auto;
     margin: 15px;
+    margin-top: 30px;
 }
 
 .container .row div.col:nth-child(2) {
+    font-size: 1.5vw;
     margin: 15px;
     text-align: center;
     border: solid 2px black;

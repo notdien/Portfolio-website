@@ -1,1 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Darumadrop+One&display=swap');
+
+* {
+    font-family: 'Darumadrop One', cursive;
+}
