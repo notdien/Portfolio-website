@@ -1,14 +1,10 @@
-.container-wrapper {
-    display: flex;
-    align-items: center;
+.responsive {
+    max-width: 100%;
+    height: auto;
+    margin: 15px;
 }
 
-.image {
-    margin: 20px;
-    height: 10%;
-    width: 10%;
-}
-
-.boxed {
+.container .row div.col:nth-child(2) {
+    margin: 15px;
     text-align: center;
 }
