@@ -3,12 +3,14 @@
 const express = require('express');
 const app = express();
 
-const bodyParser = require('body-parser');
+// const bodyParser = require('body-parser');
 
 const ejs = require('ejs');
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
+app.use(express.static(__dirname + '/views'));
 
+app.use(express.static('./views'));
 
 // web server
 app.get('/', function(req, res) {
