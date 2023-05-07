@@ -11,16 +11,16 @@ app.set('views', __dirname + '/views');
 
 
 // web server
-app.get('/', function(res) {
-    res.render('home')
+app.get('/', function(req, res) {
+    res.render('home');
 });
 
-app.get('/portfolio', function(res) {
-    res.render('portfolio')
+app.get('/portfolio', function(req, res) {
+    res.render('portfolio');
 });
 
-app.get('/contact', function(res) {
-    res.render('contact')
+app.get('/contact', function(req, res) {
+    res.render('contact');
 });
 
 app.listen(5678);
