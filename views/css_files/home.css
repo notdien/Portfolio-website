@@ -1,0 +1,14 @@
+.container-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.image {
+    margin: 20px;
+    height: 10%;
+    width: 10%;
+}
+
+.boxed {
+    text-align: center;
+}
