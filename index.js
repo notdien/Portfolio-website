@@ -33,11 +33,16 @@ app.get('/contact', function(req, res) {
 
 app.post('/send-email', async(req, res) => {
     
-    var user_info = {
-        "name": req.body.name,
-        "number": req.body.number,
-        "email": req.body.email,
-        "message": req.body.email
+    const data = {
+        "subject": req.body.subject,
+        "body": [
+            {
+                "name": req.body.name,
+                "number": req.body.number,
+                "email": req.body.email,
+                "message": req.body.message
+            }
+        ]
     };
 
     let transporter = nodeMailer.createTransport({
@@ -51,10 +56,10 @@ app.post('/send-email', async(req, res) => {
     });
 
     let info = await transporter.sendMail({
-        from: user_info.email,
-        to: 'dien7shoots@gmail.com',
-        subject: user_info.name,
-        text: user_info.message,
+        from: "7shoots website",
+        to: "dien7shoots@gmail.com",
+        subject: data.subject,
+        text: data.body
     });
 
     try {
