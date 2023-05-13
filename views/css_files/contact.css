@@ -1,7 +1,6 @@
 .middle-box {
     width: 100%;
     height: 100vh;
-    background-image: url("/views/images/bg.jpeg");
     display: flex;
     align-items: center;
     justify-content: center;
