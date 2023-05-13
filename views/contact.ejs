@@ -8,11 +8,12 @@
     <link href="css_files/font.css" rel="stylesheet" type="text/css">
     <link href="css_files/background.css" rel="stylesheet" type="text/css">
     <link href="css_files/contact.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <%- include('navbar') %>
 </head>
 <body>
     <div class="middle-box">
-        <form class="form-layout">
+        <form id="form-layout" class="form-layout">
             <h2>Lets Connect!</h2>
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Name</label>
@@ -28,16 +29,38 @@
             </div>
             <div class="mb-3">
                 <label for="exampleFormControlTextarea1" class="form-label">Tell me about what you had in mind</label>
-                <textarea class="form-control" id="message" rows="3"></textarea>
+                <textarea id="message" class="form-control" id="message" rows="3"></textarea>
             </div>
 
-            <button id="submit-btn" class="btn btn-primary" type="submit">Submit</button>
+            <button onclick="sendEmail()" id="submit-btn" class="btn btn-primary" type="submit">Submit</button>
         </form>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <script>
 
         function sendEmail() {
+
+            const form = document.getElementById('form-layout');
+
+            form.addEventListener('submit', async(event) => {
+                event.preventDefault();
+
+                var name = $('#name').val();
+                var number = $('#number').val();
+                var email = $('#email').val();
+                var message = $('#message').val();
+
+                
+                try {
+                    const response = await axios.post('/send-email', {name, number, email, message});
+                    alert(response.data.message);
+                    form.reset();
+                } catch (error) {
+                    alert('Failed to send email :(');
+                }
+            });
 
         }
     </script>
