@@ -40,13 +40,15 @@
     border-radius: 3px 0 0 3px;
 }
 
-.prev:hover, .next:hover {
+.prev:hover, 
+.next:hover {
     background-color: rgba(0,0,0,0.8);
 }
 
 .text {
-    color: #f2f2f2;
-    font-size: 15px;
+    color: black;
+    background-color: white;
+    font-size: 20px;
     padding: 8px 12px;
     position: absolute;
     bottom: 8px;
@@ -56,7 +58,7 @@
 
 .numbertext {
     color: #f2f2f2;
-    font-size: 12px;
+    font-size: 30px;
     padding: 8px 12px;
     position: absolute;
     top: 0;
@@ -76,14 +78,4 @@
 .active, 
 .dot:hover {
     background-color: #717171;
-}
-
-/* .fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-} */
-
-@keyframes fade {
-    from {opacity: .4;}
-    to {opacity: 1;}
 }
