@@ -23,8 +23,8 @@ app.get('/', function(req, res) {
     res.render('home');
 });
 
-app.get('/portfolio', function(req, res) {
-    res.render('portfolio');
+app.get('/pf', function(req, res) {
+    res.render('pf');
 });
 
 app.get('/contact', function(req, res) {
