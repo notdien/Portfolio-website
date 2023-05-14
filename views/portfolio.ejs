@@ -5,11 +5,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="css_files/font.css" rel="stylesheet" type="text/css">
+    <link href="css_files/background.css" rel="stylesheet" type="text/css">
+    <link href="css_files/portfolio.css" rel="stylesheet" type="text/css">
     <%- include('navbar') %>
 </head>
 <body>
-    <p>
-        Hello world2
-    </p>
+    <div class="middle-box">
+        <div class="slideshow-container">
+
+            <div class="mySlides">
+                <div class="numbertext">1 / 3</div>
+                <!-- <video width="320" height="240" controls>
+                    <source src="videos/MIA1MIN.mp4" type="video/mp4">
+                    <div class="text">Miami</div>
+                </video> -->
+                <img src="portfolio/MIA.png" style="width:100%">
+                
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">2 / 3</div>
+                <!-- <video width="320" height="240" controls>
+                    <source src="videos/Va_final.mp4" type="video/mp4">
+                    <div class="text">Virginia</div>
+                </video> -->
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">3 / 3</div>
+                <!-- <video width="320" height="240" controls>
+                    <source src="videos/GRAD4.mp4" type="video/mp4">
+                    <div class="text">Graduation</div>
+                </video> -->
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+        }
+    </script>
 </body>
 </html>
