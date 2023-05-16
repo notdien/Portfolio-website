@@ -67,5 +67,7 @@ app.post('/send-email', async(req, res) => {
     }
 });
 
-app.listen(5678);
+// app.listen(5678);
+port = process.env.PORT || 5678
+var listener = app.listen(port) // starts the server
 console.log("Server is running...")
