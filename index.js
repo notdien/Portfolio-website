@@ -31,6 +31,10 @@ app.get('/contact', function(req, res) {
     res.render('contact');
 });
 
+app.get('/sent', function(req, res) {
+    res.render('sent')
+})
+
 app.post('/send-email', async(req, res) => {
 
     const data = {

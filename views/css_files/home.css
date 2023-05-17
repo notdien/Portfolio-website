@@ -8,7 +8,7 @@
 }
 
 .container-box {
-    background-color: beige;
+    background-color: white;
     height: auto;
     margin: 10px;
     width: 1000px;
@@ -47,7 +47,7 @@
 }
 
 /* For responsiveness on mobile devices */
-@media only screen and (max-width: 1300px) {
+@media only screen and (max-width: 1500px) {
     .middle-box {
         height: auto;
     }
